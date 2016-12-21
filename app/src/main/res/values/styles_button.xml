@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!--ボタンの設定-->
+    <style name="AppTheme.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="AppTheme.Button.Fill">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <!--ボタンの位置-->
+    <style name="AppTheme.Button.Center">
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="AppTheme.Button.Right">
+        <item name="android:layout_gravity">right</item>
+    </style>
+
+    <style name="AppTheme.Button.Left">
+        <item name="android:layout_gravity">left</item>
+    </style>
+
+
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--メインページ-->
+    <string name="activity_main_user_name">ユーザー名さん</string>
+    <string name="activity_main_button_top">出社連絡</string>
+    <string name="activity_main_button_bottom">日報</string>
+
+    <!--出社連絡送信ページ-->
+    <string name="activity_main_send_work_title">出社連絡</string>
+    <string name="activity_main_send_work_button_main">送信</string>
+    <string name="activity_main_send_work_message">本当に送信しますか？</string>
+    <string name="activity_main_send_work_button_left">はい</string>
+    <string name="activity_main_send_work_button_right">いいえ</string>
+    <string name="activity_main_send_work_finish">送信完了</string>
+
+    <!--日報送信ページ-->
+
+</resources>

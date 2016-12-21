@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!-- TextViewの設定 -->
+    <style name="AppTheme.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="AppTheme.TextView.Center">
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="AppTheme.TextView.Right">
+        <item name="android:layout_gravity">right</item>
+    </style>
+
+    <style name="AppTheme.TextView.Left">
+        <item name="android:layout_gravity">left</item>
+    </style>
+
+<!-- Large Default-->
+    <style name="AppTheme.TextView.Large">
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+
+    <!--白-->
+    <style name="AppTheme.TextView.Large.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="AppTheme.TextView.Large.White.Center">
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="AppTheme.TextView.Large.White.Right">
+        <item name="android:layout_gravity">right</item>
+    </style>
+
+    <style name="AppTheme.TextView.Large.White.Left">
+        <item name="android:layout_gravity">left</item>
+    </style>
+
+    <style name="AppTheme.TextView.Large.White.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppTheme.TextView.Large.White.Bold.Center">
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="AppTheme.TextView.Large.White.Bold.Right">
+        <item name="android:layout_gravity">right</item>
+    </style>
+
+    <style name="AppTheme.TextView.Large.White.Bold.Left">
+        <item name="android:layout_gravity">left</item>
+    </style>
+
+    <!--黒-->
+    <style name="AppTheme.TextView.Large.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="AppTheme.TextView.Large.Black.Center">
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="AppTheme.TextView.Large.Black.Right">
+        <item name="android:layout_gravity">right</item>
+    </style>
+
+    <style name="AppTheme.TextView.Large.Black.Left">
+        <item name="android:layout_gravity">left</item>
+    </style>
+
+    <style name="AppTheme.TextView.Large.Black.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppTheme.TextView.Large.Black.Bold.Center">
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="AppTheme.TextView.Large.Black.Bold.Right">
+        <item name="android:layout_gravity">right</item>
+    </style>
+
+    <style name="AppTheme.TextView.Large.Black.Bold.Left">
+        <item name="android:layout_gravity">left</item>
+    </style>
+
+<!-- Medium Default-->
+    <style name="AppTheme.TextView.Medium">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+    <!--白-->
+    <style name="AppTheme.TextView.Medium.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="AppTheme.TextView.Medium.White.Center">
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="AppTheme.TextView.Medium.White.Right">
+        <item name="android:layout_gravity">right</item>
+    </style>
+
+    <style name="AppTheme.TextView.Medium.White.Left">
+        <item name="android:layout_gravity">left</item>
+    </style>
+
+    <style name="AppTheme.TextView.Medium.White.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppTheme.TextView.Medium.White.Bold.Center">
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="AppTheme.TextView.Medium.White.Bold.Right">
+        <item name="android:layout_gravity">right</item>
+    </style>
+
+    <style name="AppTheme.TextView.Medium.White.Bold.Left">
+        <item name="android:layout_gravity">left</item>
+    </style>
+
+    <!--黒-->
+    <style name="AppTheme.TextView.Medium.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="AppTheme.TextView.Medium.Black.Center">
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="AppTheme.TextView.Medium.Black.Right">
+        <item name="android:layout_gravity">right</item>
+    </style>
+
+    <style name="AppTheme.TextView.Medium.Black.Left">
+        <item name="android:layout_gravity">left</item>
+    </style>
+
+    <style name="AppTheme.TextView.Medium.Black.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppTheme.TextView.Medium.Black.Bold.Center">
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="AppTheme.TextView.Medium.Black.Bold.Right">
+        <item name="android:layout_gravity">right</item>
+    </style>
+
+    <style name="AppTheme.TextView.Medium.Black.Bold.Left">
+        <item name="android:layout_gravity">left</item>
+    </style>
+
+<!-- Small Default-->
+    <style name="AppTheme.TextView.Small">
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+    <!--白-->
+    <style name="AppTheme.TextView.Small.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="AppTheme.TextView.Small.White.Center">
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="AppTheme.TextView.Small.White.Right">
+        <item name="android:layout_gravity">right</item>
+    </style>
+
+    <style name="AppTheme.TextView.Small.White.Left">
+        <item name="android:layout_gravity">left</item>
+    </style>
+
+    <style name="AppTheme.TextView.Small.White.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppTheme.TextView.Small.White.Bold.Center">
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="AppTheme.TextView.Small.White.Bold.Right">
+        <item name="android:layout_gravity">right</item>
+    </style>
+
+    <style name="AppTheme.TextView.Small.White.Bold.Left">
+        <item name="android:layout_gravity">left</item>
+    </style>
+
+    <!--黒-->
+    <style name="AppTheme.TextView.Small.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="AppTheme.TextView.Small.Black.Center">
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="AppTheme.TextView.Small.Black.Right">
+        <item name="android:layout_gravity">right</item>
+    </style>
+
+    <style name="AppTheme.TextView.Small.Black.Left">
+        <item name="android:layout_gravity">left</item>
+    </style>
+
+    <style name="AppTheme.TextView.Small.Black.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppTheme.TextView.Small.Black.Bold.Center">
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="AppTheme.TextView.Small.Black.Bold.Right">
+        <item name="android:layout_gravity">right</item>
+    </style>
+
+    <style name="AppTheme.TextView.Small.Black.Bold.Left">
+        <item name="android:layout_gravity">left</item>
+    </style>
+
+
+    <!-- EditTextの設定 -->
+    <style name="AppTheme.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColorHint">@color/ColorHint</item>
+        <item name="colorControlActivated">@color/ControlActivated</item>
+    </style>
+
+    <style name="AppTheme.EditText.Oneline">
+        <item name="android:singleLine">true</item>
+    </style>
+
+</resources>
