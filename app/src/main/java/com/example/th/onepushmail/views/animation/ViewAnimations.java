@@ -15,9 +15,10 @@ public class ViewAnimations {
 
     /**
      * alphaアニメーション（出現）
-     *
+     * <p>
      * ViewAnimations.appear(引数、、、);
      */
+    //１つのパーツをappear
     public static void appear(View first, int time) {
         ViewAnimator
                 .animate(first)
@@ -27,6 +28,7 @@ public class ViewAnimations {
         first.setVisibility(View.VISIBLE);
     }
 
+    //２つのパーツをappear
     public static void appear(View first, View second, int time) {
         ViewAnimator
                 .animate(first, second)
@@ -37,6 +39,7 @@ public class ViewAnimations {
         second.setVisibility(View.VISIBLE);
     }
 
+    //３つのパーツをappear
     public static void appear(View first, View second, View third, int time) {
         ViewAnimator
                 .animate(first, second, third)
@@ -48,7 +51,7 @@ public class ViewAnimations {
         third.setVisibility(View.VISIBLE);
     }
 
-    //始まりと終わりのalpha値を設定できる
+    //１つのパーツをappear //始まりと終わりのalpha値を設定できる
     public static void appear(View first, int alphaStart, int alphaEnd, int time) {
         ViewAnimator
                 .animate(first)
@@ -58,6 +61,7 @@ public class ViewAnimations {
         first.setVisibility(View.VISIBLE);
     }
 
+    //２つのパーツをappear //始まりと終わりのalpha値を設定できる
     public static void appear(View first, View second, int alphaStart, int alphaEnd, int time) {
         ViewAnimator
                 .animate(first, second)
@@ -68,6 +72,7 @@ public class ViewAnimations {
         second.setVisibility(View.VISIBLE);
     }
 
+    //３つのパーツをappear //始まりと終わりのalpha値を設定できる
     public static void appear(View first, View second, View third, int alphaStart, int alphaEnd, int time) {
         ViewAnimator
                 .animate(first, second, third)
@@ -79,11 +84,14 @@ public class ViewAnimations {
         third.setVisibility(View.VISIBLE);
     }
 
+
     /**
      * alphaアニメーション（消滅）
-     *
-     * ViewAnimations.disappear(引数、、、);
+     * <p>
+     * 例 ViewAnimations.disappear(view,時間);
      */
+
+    //１つのパーツをdisappear
     public static void disappear(View first, int time) {
         ViewAnimator
                 .animate(first)
@@ -93,6 +101,7 @@ public class ViewAnimations {
         first.setVisibility(View.GONE);
     }
 
+    //２つのパーツを同時にdisappear
     public static void disappear(View first, View second, int time) {
         ViewAnimator
                 .animate(first, second)
@@ -103,6 +112,7 @@ public class ViewAnimations {
         second.setVisibility(View.GONE);
     }
 
+    //３つのパーツを同時にdisappear
     public static void disappear(View first, View second, View third, int time) {
         ViewAnimator
                 .animate(first, second, third)
