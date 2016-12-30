@@ -12,6 +12,7 @@
     <string name="activity_main_send_work_message">本当に送信しますか？</string>
     <string name="activity_main_send_work_button_left">はい</string>
     <string name="activity_main_send_work_button_right">いいえ</string>
+    <string name="activity_main_send_work_sending">送信中</string>
     <string name="activity_main_send_work_finish">送信完了</string>
 
     <!--日報送信ページ-->

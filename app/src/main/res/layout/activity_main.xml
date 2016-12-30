@@ -1,46 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
-    style="@style/AppTheme.RelativeLayout.Fill"
     tools:context="com.example.th.onepushmail.activity.main.MainActivity">
 
-    <LinearLayout
-        style="@style/AppTheme.LinearLayout.Vertical.Fill"
-        android:gravity="center">
+    <RelativeLayout
+        android:id="@+id/activity_main"
+        style="@style/AppTheme.RelativeLayout.Fill">
 
-        <TextView
-            android:id="@+id/main_user_name"
-            style="@style/AppTheme.TextView.Large.Black.Bold.Center"
-            android:layout_marginTop="20dp"
-            android:text="@string/activity_main_user_name" />
+        <LinearLayout
+            style="@style/AppTheme.LinearLayout.Vertical.Fill"
+            android:gravity="center">
 
-        <CalendarView
-            android:id="@+id/main_calendar"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:maxDate="01/01/2026"
-            android:minDate="01/01/2016"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:paddingTop="10dp"></CalendarView>
+            <TextView
+                android:id="@+id/main_user_name"
+                style="@style/AppTheme.TextView.Large.Black.Bold.Center"
+                android:layout_marginTop="20dp"
+                android:text="@string/activity_main_user_name" />
 
-        <Button
-            android:id="@+id/main_button_top"
-            style="@style/AppTheme.Button.Fill"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="20dp"
-            android:text="@string/activity_main_button_top" />
+            <CalendarView
+                android:id="@+id/main_calendar"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:maxDate="01/01/2026"
+                android:minDate="01/01/2016"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"></CalendarView>
 
-        <Button
-            android:id="@+id/main_button_bottom"
-            style="@style/AppTheme.Button.Fill"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
-            android:text="@string/activity_main_button_bottom" />
+            <Button
+                android:id="@+id/main_button_top"
+                style="@style/AppTheme.Button.Fill"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/activity_main_button_top" />
 
-    </LinearLayout>
+            <Button
+                android:id="@+id/main_button_bottom"
+                style="@style/AppTheme.Button.Fill"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/activity_main_button_bottom" />
 
-</RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

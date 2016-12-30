@@ -15,4 +15,10 @@
         <item name="android:windowContentOverlay">@null</item>
     </style>
 
+    <!-- ダイアログ -->
+    <style name="CommonAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="colorAccent">#ff0000ff</item>
+    </style>
+
 </resources>
