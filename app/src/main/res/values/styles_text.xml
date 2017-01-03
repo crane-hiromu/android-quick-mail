@@ -237,8 +237,8 @@
     <style name="AppTheme.EditText">
         <item name="android:layout_width">match_parent</item>
         <item name="android:gravity">center_vertical</item>
-        <item name="android:textColorHint">@color/ColorHint</item>
-        <item name="colorControlActivated">@color/ControlActivated</item>
+        <item name="android:textColorHint">@color/colorHint</item>
+        <item name="colorControlActivated">@color/controlActivated</item>
     </style>
 
     <style name="AppTheme.EditText.Oneline">

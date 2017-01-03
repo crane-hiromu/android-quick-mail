@@ -7,6 +7,7 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
 import android.text.TextUtils;
 
+import com.example.th.onepushmail.definition.BundleDefinition;
 import com.example.th.onepushmail.log.LogUtil;
 
 /**
@@ -59,9 +60,9 @@ public class ProgressDialogFragment extends DialogFragment {
     /**
      * タイトル+メッセージ+スタイル
      * <p>
-     * 例 ProgressDialogFragment.newInstance("title","message",1);
+     * 例 ProgressDialogFragment.newInstance("title","message",ProgressDialog.STYLE_HORIZONTAL);
      */
-    public static ProgressDialogFragment newInstance(@NonNull String title, @NonNull String message, @NonNull Integer style) {
+    public static ProgressDialogFragment newInstance(@NonNull String title, @NonNull String message, @NonNull int style) {
         Bundle args = new Bundle();
         args.putString(BundleDefinition.BUNDLE_TITLE, title);
         args.putString(BundleDefinition.BUNDLE_MESSAGE, message);
@@ -95,7 +96,7 @@ public class ProgressDialogFragment extends DialogFragment {
             progressDialog.setMessage(message);
         }
 
-        //プログレスダイアログ 0:SPINNER/1:HORIZONTAL
+        //プログレスダイアログ 0:STYLE_SPINNER/1:STYLE_HORIZONTAL
         progressDialog.setProgressStyle(style);
 
         //バックボタンの無効
@@ -105,8 +106,6 @@ public class ProgressDialogFragment extends DialogFragment {
 
     /**
      * progressDialog取得
-     * <p>
-     * 例 progressDialog.getDialog().dismiss();
      */
     @Override
     public Dialog getDialog() {
@@ -116,6 +115,8 @@ public class ProgressDialogFragment extends DialogFragment {
 
     /**
      * ProgressDialog破棄
+     *
+     * 例 ProgressDialogFragment.dismiss();
      */
     @Override
     public void onDestroy() {

@@ -5,12 +5,14 @@
     <RelativeLayout
         android:id="@+id/activity_main_send_work_mail"
         style="@style/AppTheme.RelativeLayout.Fill"
+        android:gravity="center_vertical"
         tools:context="com.example.th.onepushmail.activity.main.mail.MainSendWorkMailActivity">
 
         <LinearLayout
             style="@style/AppTheme.LinearLayout.Vertical.Fill"
             android:gravity="center">
 
+            <!--タイトル-->
             <TextView
                 android:id="@+id/main_send_work_title"
                 style="@style/AppTheme.TextView.Large.Black.Bold"
@@ -18,10 +20,11 @@
 
             <!--送信ボタン-->
             <Button
-                android:id="@+id/main_send_work_button_main"
+                android:id="@+id/main_send_work_button_mail"
                 style="@style/AppTheme.Button"
                 android:layout_marginTop="30dp"
-                android:text="@string/activity_main_send_work_button_main" />
+                android:text="@string/activity_main_send_work_button_main"
+                android:background="@drawable/button_style_circle_rightgreen"/>
 
         </LinearLayout>
 

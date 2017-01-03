@@ -10,10 +10,10 @@ public interface DialogListener extends EventListener{
     /**
      * Positiveボタン
      */
-    public void positiveClick();
+    public void positiveClick(int which);
 
     /**
      * Negativeボタン
      */
-    public void negativeClick();
+    public void negativeClick(int which);
 }

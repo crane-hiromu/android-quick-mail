@@ -5,6 +5,10 @@
     <color name="white">#FFFFFF</color>
 
     <!--EditView-->
-    <color name="ColorHint">#BFB8B6</color>
-    <color name="ControlActivated">#FF4081</color>
+    <color name="colorHint">#BFB8B6</color>
+    <color name="controlActivated">#FF4081</color>
+
+    <!--button-->
+    <color name="buttonLightGreen">#a7d84c</color>
+    <color name="buttonGray">#aaa</color>
 </resources>

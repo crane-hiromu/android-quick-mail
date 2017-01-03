@@ -1,3 +1,6 @@
+def VERSION_CODE = 1
+def VERSION_NAME = "1.0.0"
+
 apply plugin: 'com.android.application'
 
 android {
@@ -7,28 +10,55 @@ android {
         applicationId "com.example.th.onepushmail"
         minSdkVersion 21
         targetSdkVersion 24
-        versionCode 1
-        versionName "1.0"
+        versionCode VERSION_CODE
+        versionName VERSION_NAME
+
+        // テスト用
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
+            //コードの圧縮 ビルド時間が長くなるのでリリース時のみ
             minifyEnabled false
+//            shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    // DataBindingの許可
     dataBinding {
         enabled = true
     }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    compile 'com.android.support:appcompat-v7:24.2.1'
-    compile 'com.github.florent37:viewanimator:1.0.4'
-    compile 'com.android.support:support-v4:24.2.1'
+    def supportLibVer = '24.2.1'
+    def okHttpVer = '3.4.1'
+    def gmailApiVer = '1.22.0'
+    def testCompVer = '0.5'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    // test
+    androidTestCompile "com.android.support.test:runner:${testCompVer}"
+    androidTestCompile "com.android.support.test:rules:${testCompVer}"
+    androidTestCompile "com.android.support:support-annotations:${supportLibVer}"
     testCompile 'junit:junit:4.12'
+    //JDK 1.8から動作がうまくいかない？
+    //    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
+    // Support library
+    compile "com.android.support:appcompat-v7:${supportLibVer}"
+    compile "com.android.support:support-v4:${supportLibVer}"
+    compile "com.android.support:recyclerview-v7:${supportLibVer}"
+    compile 'com.github.florent37:viewanimator:1.0.4'
+    // okHttp
+    compile "com.squareup.okhttp3:logging-interceptor:${okHttpVer}"
+    // Gmail Api に必要
+    compile 'pub.devrel:easypermissions:0.2.1'
+    compile 'com.google.android.gms:play-services-auth:10.0.1'
+    compile("com.google.api-client:google-api-client-android:${gmailApiVer}") {
+        exclude group: 'org.apache.httpcomponents'
+    }
+    compile("com.google.apis:google-api-services-gmail:v1-rev53-${gmailApiVer}") {
+        exclude group: 'org.apache.httpcomponents'
+    }
+    compile files('libs/activation.jar')
 }
+
