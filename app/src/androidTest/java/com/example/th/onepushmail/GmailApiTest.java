@@ -52,13 +52,7 @@ public class GmailApiTest {
         final TestActivity activity = activityTestRule.getActivity();
         Context context = activity.getApplicationContext();
 
-        //テスト設定
-        final String fromEmail = "h.tsuruta@leihauoli.com";
-        final String password = "";
-        String toEmail = "h.tsuruta@leihauoli.com";
-        String title = "test title";
-        String body = "test message";
-        /////////////////////
+
 
         try {
             //email と password更新
