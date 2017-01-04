@@ -13,6 +13,7 @@ import com.example.th.onepushmail.definition.ButtonDefinition;
 import com.example.th.onepushmail.fragment.AlertDialogFragment;
 import com.example.th.onepushmail.fragment.ProgressDialogFragment;
 import com.example.th.onepushmail.interfaces.DialogListener;
+import com.example.th.onepushmail.network.GmailManager;
 import com.example.th.onepushmail.views.animation.ViewAnimations;
 
 public class MainSendWorkMailActivity extends AppCompatActivity implements
@@ -54,16 +55,24 @@ public class MainSendWorkMailActivity extends AppCompatActivity implements
                 ViewAnimations.invisible(sendButton, 1000);
 
                 //リクエストをとばす(一旦３秒のプログレス)
-                new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        progressDialogFragment.dismiss();
-
-                        alertDialogFragment = AlertDialogFragment.newInstance(ButtonDefinition.COMPLEATE, ButtonDefinition.OK, DialogRequestCode.AFTER_PROGRESS);
-                        alertDialogFragment.setDialogListener(self);
+//                new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                           if (progressDialogFragment.getShowsDialog()){
+//                              progressDialogFragment.dismiss();
+//                          }
+//
+//                        alertDialogFragment = AlertDialogFragment.newInstance(ButtonDefinition.COMPLEATE, ButtonDefinition.OK, DialogRequestCode.AFTER_PROGRESS);
+//                        alertDialogFragment.setDialogListener(self);
                         alertDialogFragment.show(getSupportFragmentManager(), null);
-                    }
-                }, 3000);
+//                    }
+//                }, 3000);
+                try {
+                    GmailManager gmailManager = new GmailManager(self, "h.tsuruta@leihauoli.com", "android");
+                    gmailManager.sendMail(self);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
 
                 break;
 

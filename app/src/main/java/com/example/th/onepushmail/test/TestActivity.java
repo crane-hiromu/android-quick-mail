@@ -1,4 +1,4 @@
-package com.example.th.onepushmail.debug;
+package com.example.th.onepushmail.test;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

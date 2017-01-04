@@ -31,7 +31,7 @@
         <activity android:name=".activity.main.mail.MainSendWorkMailActivity"></activity>
 
         <!--test activity-->
-        <activity android:name=".debug.TestActivity" />
+        <activity android:name=".test.TestActivity" />
     </application>
 
 </manifest>

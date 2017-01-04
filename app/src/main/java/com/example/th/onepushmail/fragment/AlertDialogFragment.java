@@ -11,7 +11,7 @@ import android.text.TextUtils;
 import com.example.th.onepushmail.R;
 import com.example.th.onepushmail.definition.BundleDefinition;
 import com.example.th.onepushmail.interfaces.DialogListener;
-import com.example.th.onepushmail.log.LogUtil;
+import com.example.th.onepushmail.utils.LogUtil;
 
 /**
  * アラートダイアログ

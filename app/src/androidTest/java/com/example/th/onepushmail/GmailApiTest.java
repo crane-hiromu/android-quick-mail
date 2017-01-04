@@ -10,8 +10,8 @@ import android.preference.PreferenceManager;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
-import com.example.th.onepushmail.debug.TestActivity;
-import com.example.th.onepushmail.log.LogUtil;
+import com.example.th.onepushmail.test.TestActivity;
+import com.example.th.onepushmail.utils.LogUtil;
 
 import org.junit.After;
 import org.junit.Before;
@@ -33,7 +33,7 @@ import javax.mail.internet.MimeMultipart;
 
 @RunWith(AndroidJUnit4.class)
 public class GmailApiTest {
-    GmailApiTest self = this;
+    final GmailApiTest self = this;
 
     @Rule
     public ActivityTestRule<TestActivity> activityTestRule = new ActivityTestRule<>(TestActivity.class);
@@ -52,13 +52,20 @@ public class GmailApiTest {
         final TestActivity activity = activityTestRule.getActivity();
         Context context = activity.getApplicationContext();
 
-
+        //テスト設定
+        final String fromEmail = "h.tsuruta@leihauoli.com";
+        final String password = "tsuruhiro0715";
+        String toEmail = "h.tsuruta@leihauoli.com";
+        String title = "test title";
+        String body = "test message";
+        /////////////////////
 
         try {
             //email と password更新
-            SharedPreferences gamilInfo = PreferenceManager.getDefaultSharedPreferences(context);
-            gamilInfo.edit().putString("email", fromEmail).commit();
-            gamilInfo.edit().putString("password", password).commit();
+            SharedPreferences.Editor gmailInfo = PreferenceManager.getDefaultSharedPreferences(context).edit();
+            gmailInfo.putString("email", fromEmail);
+            gmailInfo.putString("password", password);
+            gmailInfo.commit();
 
             //以下メール送信
             final Properties property = new Properties();

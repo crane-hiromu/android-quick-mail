@@ -8,7 +8,7 @@ import android.support.v4.app.DialogFragment;
 import android.text.TextUtils;
 
 import com.example.th.onepushmail.definition.BundleDefinition;
-import com.example.th.onepushmail.log.LogUtil;
+import com.example.th.onepushmail.utils.LogUtil;
 
 /**
  * プログレスダイアログ
