@@ -4,7 +4,7 @@ package com.example.th.onepushmail.definition;
  * Created by T.H on 2016/12/30.
  */
 
-public class ButtonDefinition {
+public class MessageDefinition {
     //String
     public static final String OK = "OK";
     public static final String CANCEL = "キャンセル";

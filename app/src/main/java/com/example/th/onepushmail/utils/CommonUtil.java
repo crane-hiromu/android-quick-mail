@@ -12,7 +12,7 @@ import java.util.Date;
  * Created by T.H on 2017/01/04.
  */
 
-public class DateFormatUtil {
+public class CommonUtil {
     public static String getDate(){
         //日付の型を定義
         final String format = "yyyy/MM/dd";
