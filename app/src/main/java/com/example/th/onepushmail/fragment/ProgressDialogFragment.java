@@ -1,6 +1,7 @@
 package com.example.th.onepushmail.fragment;
 
 import android.app.Dialog;
+import android.app.FragmentManager;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.annotation.NonNull;

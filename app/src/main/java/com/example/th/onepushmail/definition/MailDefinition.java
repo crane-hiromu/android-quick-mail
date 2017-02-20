@@ -7,6 +7,11 @@ package com.example.th.onepushmail.definition;
  */
 
 public class MailDefinition {
+    //アドレス
+    public static final String ME = "自分のアドレス";
+    public static final String ML_ALL = "全体のアドレス";
+
+    //タイトルの種類
     public static final String WORK = "【出社連絡】";
     public static final String REPORT = "【日報】";
     public static final String ABSENTEE = "【勤怠連絡】";

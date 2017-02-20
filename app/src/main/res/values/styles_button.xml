@@ -6,24 +6,61 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
     </style>
 
     <style name="AppTheme.Button.Fill">
         <item name="android:layout_width">match_parent</item>
     </style>
 
-    <!--ボタンの位置-->
-    <style name="AppTheme.Button.Center">
-        <item name="android:layout_gravity">center</item>
+    <!--テキストサイズ / カラー -->
+    <style name="AppTheme.Button.Small">
+        <item name="android:textSize">@dimen/text_size_small</item>
     </style>
 
-    <style name="AppTheme.Button.Right">
-        <item name="android:layout_gravity">right</item>
+    <style name="AppTheme.Button.Small.White">
+        <item name="android:textColor">@color/white100</item>
     </style>
 
-    <style name="AppTheme.Button.Left">
-        <item name="android:layout_gravity">left</item>
+    <style name="AppTheme.Button.Medium">
+        <item name="android:textSize">@dimen/text_size_medium</item>
     </style>
 
+    <style name="AppTheme.Button.Medium.White">
+        <item name="android:textColor">@color/white100</item>
+    </style>
+
+    <style name="AppTheme.Button.Large">
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+
+    <style name="AppTheme.Button.Large.White">
+        <item name="android:textColor">@color/white100</item>
+    </style>
+
+    <!--fill-->
+    <style name="AppTheme.Button.Fill.Small">
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+    <style name="AppTheme.Button.Fill.Small.White">
+        <item name="android:textColor">@color/white100</item>
+    </style>
+
+    <style name="AppTheme.Button.Fill.Medium">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+    <style name="AppTheme.Button.Fill.Medium.White">
+        <item name="android:textColor">@color/white100</item>
+    </style>
+
+    <style name="AppTheme.Button.Fill.Large">
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+
+    <style name="AppTheme.Button.Fill.Large.White">
+        <item name="android:textColor">@color/white100</item>
+    </style>
 
 </resources>

@@ -53,9 +53,9 @@ public class GmailApiTest {
         Context context = activity.getApplicationContext();
 
         //テスト設定
-        final String fromEmail = "h.tsuruta@leihauoli.com";
-        final String password = "tsuruhiro0715";
-        String toEmail = "h.tsuruta@leihauoli.com";
+        final String fromEmail = "ログインアドレス";
+        final String password = "ログインパス";
+        String toEmail = "送信先@~~~com";
         String title = "test title";
         String body = "test message";
         /////////////////////
@@ -111,29 +111,5 @@ public class GmailApiTest {
         } finally {
             LogUtil.log(context, "gmailApiTest", "succsess");
         }
-
-
-//        final TestActivity activity = activityTestRule.getActivity();
-//
-//        Context context = activity.getApplicationContext();
-//
-//        final CountDownLatch latch = new CountDownLatch(1);
-//
-//
-//        activity.runOnUiThread(new Runnable() {
-//            @Override
-//            public void run() {
-//
-//
-//                latch.countDown();
-//            }
-//        });
-//
-//        //例外処理
-//        try {
-//            latch.await();
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
     }
 }

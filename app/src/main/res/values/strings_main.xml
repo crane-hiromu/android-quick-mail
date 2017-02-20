@@ -3,18 +3,30 @@
 
     <!--メインページ-->
     <string name="activity_main_user_name">ユーザー名さん</string>
+    <string name="activity_main_date">日付</string>
     <string name="activity_main_button_top">出社連絡</string>
     <string name="activity_main_button_bottom">日報</string>
 
+    <string name="activity_main_user_end"> さん</string>
+    <string name="activity_main_date_start">本日は</string>
+    <string name="activity_main_date_end">日です</string>
+
+    <!--toolbar-->
+    <string name="activity_main_tool_bar_title">HOME</string>
+
+
     <!--出社連絡送信ページ-->
-    <string name="activity_main_send_work_title">出社連絡</string>
-    <string name="activity_main_send_work_button_main">送信</string>
-    <string name="activity_main_send_work_message">本当に送信しますか？</string>
-    <string name="activity_main_send_work_button_left">はい</string>
-    <string name="activity_main_send_work_button_right">いいえ</string>
-    <string name="activity_main_send_work_sending">送信中</string>
-    <string name="activity_main_send_work_finish">送信完了</string>
+    <string name="activity_main_send_work_title">本日の業務内容</string>
 
     <!--日報送信ページ-->
+
+    <!--共通-->
+    <string name="activity_main_send_button_main">送信</string>
+    <string name="send_check_message">本当に送信しますか？</string>
+    <string name="send_button_left">はい</string>
+    <string name="send_button_right">いいえ</string>
+    <string name="sending">送信中</string>
+    <string name="finish">送信完了</string>
+
 
 </resources>

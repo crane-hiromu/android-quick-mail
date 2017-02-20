@@ -4,6 +4,13 @@ import java.util.EventListener;
 
 /**
  * Created by T.H on 2016/12/29.
+ *
+ * DialogFragment
+ * - private DialogListener listener = null;
+ * - listenr.positiveClick() / listenr.negativeClick()
+ *
+ * Activity
+ * - implement DialogListener
  */
 
 public interface DialogListener extends EventListener{

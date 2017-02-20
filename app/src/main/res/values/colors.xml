@@ -1,14 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--Common-->
-    <color name="black">#000000</color>
-    <color name="white">#FFFFFF</color>
+    <!--alpha値の変化-->
+
+        <!--100% — FF-->
+        <color name="black100">#000000</color>
+        <color name="gray100">#AAAAAA</color>
+        <color name="white100">#FFFFFF</color>
+        <color name="red100">#FF0000</color>
+        <color name="orange100">#FFA500</color>
+        <color name="green100">#008000</color>
+        <color name="blue100">#0000FF</color>
+
+        <!--95% — F2-->
+        <!--90% — E6-->
+        <!--85% — D9-->
+
+        <!--80% — CC-->
+        <color name="black80">#CC000000</color>
+        <color name="gray80">#CCAAAAAA</color>
+        <color name="white80">#CCFFFFFF</color>
+        <color name="red80">#CCFF0000</color>
+        <color name="orange80">#CCFFA500</color>
+        <color name="green80">#CC008000</color>
+        <color name="blue80">#CC0000FF</color>
+
+        <!--75% — BF-->
+        <!--70% — B3-->
+        <!--65% — A6-->
+        <!--60% — 99-->
+        <!--55% — 8C-->
+
+        <!--50% — 80-->
+        <color name="black50">#80000000</color>
+        <color name="gray50">#80AAAAAA</color>
+        <color name="white50">#80FFFFFF</color>
+        <color name="red50">#FF0000</color>
+        <color name="orange50">#80FFA500</color>
+        <color name="green50">#80008000</color>
+        <color name="blue50">#800000FF</color>
+
+        <!--45% — 73-->
+        <!--40% — 66-->
+        <!--35% — 59-->
+
+        <!--30% — 4D-->
+        <color name="black30">#4D000000</color>
+        <color name="gray30">#4DAAAAAA</color>
+        <color name="white30">#4DFFFFFF</color>
+        <color name="red30">#4DFF0000</color>
+        <color name="orange30">#4DFFA500</color>
+        <color name="green30">#4D008000</color>
+        <color name="blue30">#4D0000FF</color>
+
+        <!--25% — 40-->
+        <!--20% — 33-->
+        <!--15% — 26-->
+
+        <!--10% — 1A-->
+        <color name="black10">#1A000000</color>
+        <color name="gray10">#1AAAAAAA</color>
+        <color name="white10">#1AFFFFFF</color>
+        <color name="red10">#1AFF0000</color>
+        <color name="orange10">#1AFFA500</color>
+        <color name="green10">#1A008000</color>
+        <color name="blue10">#1A0000FF</color>
+
+        <!--5% — 0D-->
+
+        <!--0% — 00-->
+        <color name="clear">#00000000</color>
+
 
     <!--EditView-->
     <color name="colorHint">#BFB8B6</color>
     <color name="controlActivated">#FF4081</color>
 
-    <!--button-->
-    <color name="buttonLightGreen">#a7d84c</color>
-    <color name="buttonGray">#aaa</color>
 </resources>

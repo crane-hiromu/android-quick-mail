@@ -4,14 +4,17 @@ def VERSION_NAME = "1.0.0"
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "24.0.3"
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
     defaultConfig {
         applicationId "com.example.th.onepushmail"
         minSdkVersion 21
-        targetSdkVersion 24
+        targetSdkVersion 25
         versionCode VERSION_CODE
         versionName VERSION_NAME
+
+        //google paly ライブラリエラー解消
+        multiDexEnabled true
 
         // テスト用
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -31,9 +34,10 @@ android {
 }
 
 dependencies {
-    def supportLibVer = '24.2.1'
+    def supportLibVer = '25.1.0'
     def okHttpVer = '3.4.1'
     def gmailApiVer = '1.22.0'
+    def googleApiVer = '10.0.1'
     def testCompVer = '0.5'
     compile fileTree(include: ['*.jar'], dir: 'libs')
     // test
@@ -47,12 +51,16 @@ dependencies {
     compile "com.android.support:appcompat-v7:${supportLibVer}"
     compile "com.android.support:support-v4:${supportLibVer}"
     compile "com.android.support:recyclerview-v7:${supportLibVer}"
+    compile "com.android.support:design:${supportLibVer}"
     compile 'com.github.florent37:viewanimator:1.0.4'
     // okHttp
     compile "com.squareup.okhttp3:logging-interceptor:${okHttpVer}"
-    // Gmail Api に必要
     compile 'pub.devrel:easypermissions:0.2.1'
-    compile 'com.google.android.gms:play-services-auth:10.0.1'
+    compile "com.google.android.gms:play-services:${googleApiVer}"
+    compile "com.google.android.gms:play-services-maps:${googleApiVer}"
+    compile "com.google.android.gms:play-services-auth:${googleApiVer}"
+
+    // Gmail Api に必要
     compile("com.google.api-client:google-api-client-android:${gmailApiVer}") {
         exclude group: 'org.apache.httpcomponents'
     }

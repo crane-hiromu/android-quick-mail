@@ -1,12 +1,20 @@
 package com.example.th.onepushmail;
 
 import android.content.Context;
+import android.graphics.Point;
+import android.support.annotation.Nullable;
+import android.support.v4.app.FragmentActivity;
+import android.view.Display;
+
+import com.example.th.onepushmail.definition.UtilDefinition;
 
 import org.junit.Test;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * 日付取得のテスト
@@ -15,13 +23,11 @@ import java.util.Date;
  */
 
 public class DateTest {
-    final DateTest self = this;
-    static Context context;
 
     @Test
     public void getNowDate() throws Exception {
         //日付の型を定義
-        final String format = "yyyy/MM/dd";
+        final String format = "yyyy/MM/dd HH:mm:ss";
 
         //日付取得
         final Date date = new Date(System.currentTimeMillis());
@@ -32,7 +38,5 @@ public class DateTest {
         System.out.println(dateFormat.format(date));
 //        return dateFormat.format(date);
     }
-
-//        assertEquals(4, 2 + 2);
 }
 

@@ -26,7 +26,7 @@
 
     <!--白-->
     <style name="AppTheme.TextView.Large.White">
-        <item name="android:textColor">@color/white</item>
+        <item name="android:textColor">@color/white100</item>
     </style>
 
     <style name="AppTheme.TextView.Large.White.Center">
@@ -59,7 +59,7 @@
 
     <!--黒-->
     <style name="AppTheme.TextView.Large.Black">
-        <item name="android:textColor">@color/black</item>
+        <item name="android:textColor">@color/black100</item>
     </style>
 
     <style name="AppTheme.TextView.Large.Black.Center">
@@ -97,7 +97,7 @@
 
     <!--白-->
     <style name="AppTheme.TextView.Medium.White">
-        <item name="android:textColor">@color/white</item>
+        <item name="android:textColor">@color/white100</item>
     </style>
 
     <style name="AppTheme.TextView.Medium.White.Center">
@@ -130,7 +130,7 @@
 
     <!--黒-->
     <style name="AppTheme.TextView.Medium.Black">
-        <item name="android:textColor">@color/black</item>
+        <item name="android:textColor">@color/black100</item>
     </style>
 
     <style name="AppTheme.TextView.Medium.Black.Center">
@@ -168,7 +168,7 @@
 
     <!--白-->
     <style name="AppTheme.TextView.Small.White">
-        <item name="android:textColor">@color/white</item>
+        <item name="android:textColor">@color/white100</item>
     </style>
 
     <style name="AppTheme.TextView.Small.White.Center">
@@ -201,7 +201,7 @@
 
     <!--黒-->
     <style name="AppTheme.TextView.Small.Black">
-        <item name="android:textColor">@color/black</item>
+        <item name="android:textColor">@color/black100</item>
     </style>
 
     <style name="AppTheme.TextView.Small.Black.Center">

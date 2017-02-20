@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--spinner-->
+    <style name="AppTheme.Spinner">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/gray50</item>
+        <item name="android:drawSelectorOnTop">true</item>
+    </style>
+
+    <!--tool bar-->
+    <style name="AppTheme.ToolBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">top</item>
+    </style>
+
+    <style name="AppTheme.ToolBar.Gray">
+        <item name="android:background">@color/gray100</item>
+    </style>
+
+    <!--imageView-->
+    <style name="AppTheme.ImageView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="AppTheme.ImageView.Toolbar">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:background">@drawable/tool_bar_toggle</item>
+    </style>
+
+    <!--action button-->
+    <style name="AppTheme.ActionButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="AppTheme.ActionButton.Right">
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+
+
+</resources>

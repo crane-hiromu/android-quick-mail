@@ -17,7 +17,7 @@
 
     <!-- ダイアログ -->
     <style name="CommonAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
-        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:textColorPrimary">@color/black100</item>
         <item name="colorAccent">#ff0000ff</item>
     </style>
 

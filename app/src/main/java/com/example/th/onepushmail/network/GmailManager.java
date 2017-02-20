@@ -2,15 +2,17 @@ package com.example.th.onepushmail.network;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.SharedPreferences;
-import android.os.AsyncTask;
-import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
+import android.view.View;
 
 import com.example.th.onepushmail.definition.MailDefinition;
-import com.example.th.onepushmail.utils.DateFormatUtil;
+import com.example.th.onepushmail.definition.MessageDefinition;
+import com.example.th.onepushmail.definition.UtilDefinition;
+import com.example.th.onepushmail.utils.CommonUtil;
 import com.example.th.onepushmail.utils.LogUtil;
+import com.example.th.onepushmail.utils.ToastUtil;
 import com.example.th.onepushmail.utils.UserPreferenceUtil;
+import com.example.th.onepushmail.views.animation.ViewAnimations;
 
 import java.util.Map;
 import java.util.Properties;
@@ -27,12 +29,15 @@ import javax.mail.internet.MimeMultipart;
 
 /**
  * Created by T.H on 2017/01/04.
+ * <p>
+ * 実装例
+ * new GmailManager(self, "送り先のアドレス", "業務内容").sendMail(button);
  */
 
 public class GmailManager {
     private final GmailManager self = this;
-
-    Activity activity;
+    Context context;
+//    ProgressDialogFragment progressDialogFragment;
 
     //自身のアカウント
     private String fromEmail;
@@ -46,6 +51,15 @@ public class GmailManager {
     //UserPreferenceから取得
     private Map<String, String> user;
 
+    //リクエストの成功失敗
+    private static class ResultCode {
+        private static final int SUCCESS = 200; //成功
+        private static final int ERROR = 400; //失敗
+    }
+
+    //ResultCodeを判定
+    private Boolean keepCode = true;
+
 //    //メールの種類
 //    public static class TitleKinds {
 //        public static final int WORK = 1; //出社
@@ -58,15 +72,17 @@ public class GmailManager {
      * 出社連絡
      */
     public GmailManager(@NonNull Context context, @NonNull String toEmail, @NonNull String body) {
-        //test 動的に保存されたものを取得できる仕組みにすべし
-        UserPreferenceUtil.save(context, "h.tsuruta@leihauoli.com", "tsuruhiro0715");
-        /////
+        //test
+        // todo すでに保存されたものを取得できる仕組みにすべし
+        UserPreferenceUtil.save(context, "ユーザー名", "アドレス", "パス");
+        ///
 
         user = UserPreferenceUtil.getAccount(context);
-        this.fromEmail = user.get("email");
-        this.password = user.get("password");
+        this.context = context;
+        this.fromEmail = user.get(UtilDefinition.EMAIL);
+        this.password = user.get(UtilDefinition.PASSWORD);
         this.toEmail = toEmail;
-        this.title = MailDefinition.WORK + " " + DateFormatUtil.getDate() + " " + user.get("name");
+        this.title = MailDefinition.WORK + " " + CommonUtil.getDate(1) + " " + user.get(UtilDefinition.NAME);
         this.body = MailDefinition.BODY_TOP + body + MailDefinition.BODY_BOTTOM;
     }
 
@@ -76,11 +92,19 @@ public class GmailManager {
 //    public GmailManager(@NonNull Context context, @NonNull String toEmail, @NonNull int kinds, @NonNull String body) throws Exception {
 //
 //    }
+    public void sendMail(final View button) {
+        new MyAsyncTask() {
+//            //通信前
+//            @Override
+//            protected void onPreExecute() {
+//                super.onPreExecute();
+//                progressDialogFragment = ProgressDialogFragment.newInstance(MessageDefinition.SENDING, MessageDefinition.WAITING);
+//                progressDialogFragment.getDialog();
+//            }
 
-    public void sendMail(@NonNull final Context context) {
-        activity.runOnUiThread(new Runnable() {
+            //通信中
             @Override
-            public void run() {
+            protected Integer doInBackground(Void... params) {
                 try {
                     //メール送信
                     final Properties property = new Properties();
@@ -123,10 +147,43 @@ public class GmailManager {
 
                 } catch (MessagingException e) {
                     LogUtil.log(context, "sendMail", e.toString());
+                    keepCode = false;
+                } catch (Exception e) {
+                    LogUtil.log(context, "sendMail", e.toString());
+                    keepCode = false;
                 } finally {
                     LogUtil.log(context, "sendMail", "------finish-----");
                 }
+
+                //onPostExecuteに渡すリザルトコード
+                if (keepCode) {
+                    return ResultCode.SUCCESS;
+                } else {
+                    return ResultCode.ERROR;
+                }
+
             }
-        });
+
+            //通信後
+            @Override
+            protected void onPostExecute(Integer num) {
+//                progressDialogFragment.dismiss();
+                switch (num) {
+                    case ResultCode.ERROR:
+                        ToastUtil.show((Activity) context, MessageDefinition.NONCOMPLEATE, 1);
+                        break;
+
+                    case ResultCode.SUCCESS:
+                        ToastUtil.show((Activity) context, MessageDefinition.COMPLEATE, 1);
+                        break;
+                }
+
+                //ボタンを再び押せるように
+                if (button.getVisibility() != View.VISIBLE) {
+                    ViewAnimations.visibleSize(button, 0, 200, 1000);
+                    button.setEnabled(true);
+                }
+            }
+        }.execute();
     }
 }

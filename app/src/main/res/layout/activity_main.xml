@@ -3,47 +3,108 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.th.onepushmail.activity.main.MainActivity">
 
-    <RelativeLayout
-        android:id="@+id/activity_main"
-        style="@style/AppTheme.RelativeLayout.Fill">
+    <FrameLayout style="@style/AppTheme.FrameLayout.Fill">
 
         <LinearLayout
+            android:id="@+id/activity_main_inner"
             style="@style/AppTheme.LinearLayout.Vertical.Fill"
-            android:gravity="center">
+            android:background="@color/orange50"
+            android:gravity="center"
+            android:paddingBottom="50dp">
 
+            <!--挨拶 (時間によって動的に変化)-->
             <TextView
-                android:id="@+id/main_user_name"
-                style="@style/AppTheme.TextView.Large.Black.Bold.Center"
+                android:id="@+id/activity_main_greeting"
+                style="@style/AppTheme.TextView.Large.White.Bold"
+                tools:text="Good Morning!" />
+
+            <!--ユーザー名-->
+            <LinearLayout
+                style="@style/AppTheme.LinearLayout.Horizontal"
                 android:layout_marginTop="20dp"
-                android:text="@string/activity_main_user_name" />
+                android:gravity="center">
 
-            <CalendarView
-                android:id="@+id/main_calendar"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:maxDate="01/01/2026"
-                android:minDate="01/01/2016"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:paddingTop="10dp"></CalendarView>
+                <TextView
+                    android:id="@+id/activity_main_user_name"
+                    style="@style/AppTheme.TextView.Large.Black.Bold"
+                    tools:text="田中太郎" />
 
-            <Button
-                android:id="@+id/main_button_top"
-                style="@style/AppTheme.Button.Fill"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="20dp"
-                android:text="@string/activity_main_button_top" />
+                <TextView
+                    style="@style/AppTheme.TextView.Small.Black"
+                    android:layout_gravity="bottom"
+                    android:text="@string/activity_main_user_end" />
 
-            <Button
-                android:id="@+id/main_button_bottom"
-                style="@style/AppTheme.Button.Fill"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="10dp"
-                android:text="@string/activity_main_button_bottom" />
+            </LinearLayout>
+
+            <!--日付全体-->
+            <LinearLayout
+                style="@style/AppTheme.LinearLayout.Horizontal"
+                android:layout_marginTop="50dp"
+                android:gravity="center">
+
+                <TextView
+                    style="@style/AppTheme.TextView.Small.Black"
+                    android:layout_gravity="top"
+                    android:text="@string/activity_main_date_start" />
+
+                <!--日付（動的取得）-->
+                <TextView
+                    android:id="@+id/activity_main_date_text"
+                    style="@style/AppTheme.TextView.Large.White.Bold.Center"
+                    android:background="@drawable/textview_style_cirle"
+                    android:gravity="center"
+                    android:textSize="@dimen/activity_main_date_text"
+                    tools:text="28" />
+
+                <TextView
+                    style="@style/AppTheme.TextView.Small.Black"
+                    android:layout_gravity="bottom"
+                    android:text="@string/activity_main_date_end" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
-    </RelativeLayout>
+        <!-- Action Button -->
+        <RelativeLayout
+            style="@style/AppTheme.RelativeLayout.Fill"
+            android:paddingRight="20dp">
+
+            <!--on/off button-->
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/activity_main_float_button"
+                style="@style/AppTheme.ActionButton.Right"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/float_button_new" />
+
+            <!--出社連絡 button-->
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/activity_main_send_work_button"
+                style="@style/AppTheme.ActionButton.Right"
+                android:layout_above="@+id/activity_main_float_button"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/float_button_send_work"
+                android:visibility="invisible"
+                tools:visibility="visible" />
+
+            <!--日報 button-->
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/activity_main_send_report_button"
+                style="@style/AppTheme.ActionButton.Right"
+                android:layout_above="@+id/activity_main_send_work_button"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/float_button_send_report"
+                android:visibility="invisible"
+                tools:visibility="visible" />
+
+        </RelativeLayout>
+
+        <!--toolbar-->
+        <include
+            android:id="@+id/activity_main_common_tool_bar"
+            layout="@layout/include_tool_bar" />
+
+    </FrameLayout>
+
 </layout>
